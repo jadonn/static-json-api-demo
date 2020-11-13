@@ -1,0 +1,20 @@
+image: "node:lts-alpine"
+
+before_script:
+  - eval $(ssh-agent -s)
+  - echo $INFO_SSH_KEY | tr -d '\r' | ssh-add -
+  - mkdir -p ~/.ssh
+  - chmod 700 ~/.ssh
+  - npm install
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+    - .cache/
+    - public/
+
+deploy:
+  scripts:
+    - npx @11ty/eleventy
+    - rsync -acvzP ./_site/* flex-metal-info@173.231.201.62:~/public/
