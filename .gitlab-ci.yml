@@ -19,4 +19,4 @@ cache:
 deploy:
   script:
     - npx @11ty/eleventy
-    - rsync -acvzP ./_site/* flex-metal-info@173.231.201.62:~/public/
+    - rsync -acvzP -e 'ssh -v' ./_site/* flex-metal-info@173.231.201.62:~/public/
