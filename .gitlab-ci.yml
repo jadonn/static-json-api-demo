@@ -3,8 +3,7 @@ image: "node:lts-alpine"
 before_script:
   - apk --update add openssh-client
   - eval $(ssh-agent -s)
-  - echo $INFO_SSH_KEY
-  - echo $INFO_SSH_KEY | tr -d '\r' | ssh-add -
+  - echo "${INFO_SSH_KEY}" | tr -d '\r' | ssh-add -
   - mkdir -p ~/.ssh
   - chmod 700 ~/.ssh
   - npm install
