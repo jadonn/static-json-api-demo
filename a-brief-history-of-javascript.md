@@ -1,7 +1,6 @@
 ---
 title: "A Brief History of JavaScript"
 description: "JavaScript got its start in the early Internet to provide interactivity to static web sites. Since that humble beginning, JavaScript has grown into a multi-platform, multi-purpose modern language with a huge community."
-layout: "../../../layouts/Content.astro"
 checks:
   - type: "multipleChoice"
     question: "When was JavaScript invented?"
