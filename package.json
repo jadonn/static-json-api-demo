@@ -15,5 +15,8 @@
     "polka": "^0.5.2",
     "sirv": "^2.0.2",
     "supertest": "^6.2.3"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
   }
 }
