@@ -1,0 +1,8 @@
+---
+pagination:
+  data: collections.post
+  size: 1
+  alias: post
+permalink: "blog-json/{{ post.data.title | slug }}.json"
+---
+{{ post | postJSON }}
